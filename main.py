@@ -1,5 +1,5 @@
 from encode import encode
-
+from decode import decode
 
 def main():
     print('''
@@ -24,3 +24,9 @@ if __name__ == '__main__':
                 password = encode(pass_to_encode)
                 print(password)
                 break
+            if men_choice == '2':
+                x = decode(password)
+                print(x)
+                break
+            if men_choice == '3':
+                exit()
