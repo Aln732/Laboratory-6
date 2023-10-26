@@ -1,9 +1,4 @@
-def encode(string):
-    encodedpassword = ''
-    for i in string:
-        c = (int(i) + 3) % 10
-        encodedpassword += str(c)
-    return encodedpassword
+from encode import encode
 
 
 def main():
@@ -17,10 +12,15 @@ Menu
     ''')
 
 
-if __name__ == '__main.py__':
-    main()
-    men_choice = input('Please enter an option: ')
+password = None
+
+if __name__ == '__main__':
     while True:
-        if men_choice == '1':
-            pass_to_encode = input('Password: ')
-            print(encode(pass_to_encode))
+        main()
+        men_choice = input('Please enter an option: ')
+        while True:
+            if men_choice == '1':
+                pass_to_encode = input('Password: ')
+                password = encode(pass_to_encode)
+                print(password)
+                break
